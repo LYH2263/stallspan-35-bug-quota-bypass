@@ -9,7 +9,7 @@ onMounted(async () => {
 </script>
 <template>
   <h1>放不下</h1>
-  <p class="sub">无法安置的摊位：连续空档不足、须跨挡柱，或同优先空档不足</p>
+  <p class="sub">无法安置的摊位：连续空档不足、须跨挡柱，或同优先配额已满</p>
   <div class="card">
     <table>
       <thead><tr><th>摊主</th><th>需求宽度</th><th>原因</th></tr></thead>

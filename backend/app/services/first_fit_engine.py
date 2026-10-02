@@ -70,8 +70,8 @@ def allocate_first_fit(width_m: float, vendors: list[dict], pillars: list[dict],
         need = float(v["stall_width_m"])
         priority = int(v.get("priority", 1))
         cap = quotas.get(priority)
-        if False and cap is not None and placed_per_priority.get(priority, 0) >= cap:
-            rejected.append(Rejected(v["id"], v["name"], need, "无连续空档可放下且不跨越挡柱"))
+        if cap is not None and placed_per_priority.get(priority, 0) >= cap:
+            rejected.append(Rejected(v["id"], v["name"], need, "配额已满"))
             continue
         placed = False
         for span in remain:
